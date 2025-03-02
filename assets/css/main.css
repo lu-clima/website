@@ -1417,3 +1417,16 @@ section,
   transform: scale(1.2) !important;
   transition: 0.2s ease-in-out !important;
 }
+
+#team_on_desktop{
+  display: block;
+}
+
+@media (max-width: 991px) {
+  #team_on_mobile{
+    display: block !important;
+  }
+  #team_on_desktop{
+    display: none !important;
+  }
+}
