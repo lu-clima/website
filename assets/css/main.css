@@ -77,13 +77,17 @@ body {
 }
 
 a {
-  color: var(--accent-color);
+  color: #fff;
   text-decoration: none;
   transition: 0.3s;
 }
 
+#carouselExample a{
+  color: #fff;
+}
+
 a:hover {
-  color: color-mix(in srgb, var(--accent-color), transparent 25%);
+  color: color-mix(in srgb, var(--luclima-color), transparent 25%);
   text-decoration: none;
 }
 
