@@ -1,6 +1,6 @@
 .carousel-item img {
     object-fit: cover;
-    height: 400px; /* Ajuste conforme necessário */
+    height: 500px; /* Ajuste conforme necessário */
 }
 
 .custom-indicators {
