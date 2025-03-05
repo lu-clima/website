@@ -934,7 +934,7 @@ section,
   width: 100%;
   min-height: 70vh;
   position: relative;
-  padding: 120px 0 60px 0;
+  padding: 25px 0 60px 0;
   display: flex;
   align-items: center;
 }
@@ -1551,10 +1551,23 @@ section,
   border: none !important;
 }
 
+@keyframes pulsate-play-btn {
+  0% {
+    transform: scale(1.2);
+  }
+
+  50% {
+    transform: scale(1.1);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
 #services div.service-item:hover{
   border: 1px solid var(--luclima-color);
-  transform: scale(1.2) !important;
-  transition: 0.2s ease-in-out !important;
+  animation: pulse_about 1s normal ease-in-out !important;
 }
 
 #team_on_desktop{

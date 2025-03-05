@@ -57,16 +57,7 @@
     color: #fff;
 }
 
-@media (max-width: 575px) {
-    .carousel-caption h5 {
-        font-size: 1.7rem;
-        font-weight: ligh;
-        word-spacing: 5px;
-        letter-spacing: 2px;
-        color: #fff;
-        text-align: left;
-    }
-  }
+
   
 
 /* Botões fixos */
@@ -89,11 +80,33 @@
 .btn-dark {
     background-color: black;
     color: white;
-    border: 2px solid black;
 }
 
 .btn-light {
     background-color: white;
     color: black;
-    border: 2px solid white;
 }
+
+.btn-light:hover
+{
+    background-color: #fff !important;
+}
+.btn-dark:hover{
+    background-color: #000 !important;
+}
+
+@media (max-width: 575px) {
+    .carousel-caption h5 {
+        font-size: 1.7rem;
+        font-weight: ligh;
+        word-spacing: 5px;
+        letter-spacing: 2px;
+        color: #fff;
+        text-align: left;
+    }
+    .carousel-buttons .btn {
+        transform: scale(0.9);
+        font-size: 0.7rem;
+        width: 110px;
+    }
+  }
