@@ -6,7 +6,6 @@
 * Author: BootstrapMade.com
 * License: https://bootstrapmade.com/license/
 */
-section-title
 /*--------------------------------------------------------------
 btn-get-started
 # Font & Color Variables
@@ -885,6 +884,10 @@ section,
   padding: 0;
   margin-bottom: 30px;
   position: relative;
+}
+
+#serviceIndex{
+  margin-top: 0 !important;
 }
 
 .section-title h2 {
