@@ -109,7 +109,7 @@
     .formbold-radio-label
       .formbold-input-radio:checked
       ~ .formbold-radio-checkmark {
-      background-color: #6a64f1;
+      background-color: #2691D9;
     }
     .formbold-radio-checkmark:after {
       content: '';
@@ -149,7 +149,7 @@
       color: #536387;
     }
     .formbold-form-input:focus {
-      border-color: #6a64f1;
+      border-color: #2691D9;
       box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.05);
     }
     .formbold-form-label {
@@ -168,7 +168,7 @@
       padding: 14px 25px;
       border: none;
       font-weight: 500;
-      background-color: #6a64f1;
+      background-color: #2691D9;
       color: white;
       cursor: pointer;
       margin-top: 25px;
@@ -217,19 +217,24 @@
 
     <!-- Page Title -->
      
-    <div class="container">
+    <div class="container" id="cleanPage">
+      
       <div class="row gy-4">
         <div class="col-lg-6 order-2 order-lg-1 d-flex flex-column justify-content-center" data-aos="fade-up">
 
-           <section id="services" class="services section light-background">
+           <section id="services" class="clean-services section light-background">
             <div class="formbold-main-wrapper">
               <!-- Author: FormBold Team -->
               <!-- Learn More: https://formbold.com -->
-              <div class="formbold-form-wrapper">
-                <img src="your-image-url-here.jpg">
+              <div class="formbold-form-wrapper" class="d-flex justify-content-center align-items-center">
+                <div class="m-auto d-flex justify-content-center align-items-center">
+                  <img src="assets/img/luclima/logo.png" class="img-fluid w-75">
+                </div>
+                
+                <br>
                 <form action="https://formbold.com/s/FORM_ID" method="POST">
                   <div class="formbold-input-group">
-                    <label for="name" class="formbold-form-label"> Name Completo </label>
+                    <label for="name" class="formbold-form-label"> Nome Completo </label>
                     <input
                       type="text"
                       name="name"
@@ -246,9 +251,10 @@
             
                     <select class="formbold-form-select" name="occupation" id="occupation">
                       <option value="Student">Montagem de ar condicionado</option>
-                      <option value="designer">Manutencao e/ou Reparacao de ar condicionado</option>
-                      <option value="fullstack">Limpeza completa de ar condicionado</option>
-                      <option value="frontend">Subistituicao de gas</option>
+                      <option value="Student">Diagnostico (ar condicionado)</option>
+                      <option value="designer">Manutenção Preventiva (ar condicionado)</option>
+                      <option value="designer">Manutenção Corretiva (ar condicionado)</option>
+                      <option value="frontend">Recarga de gás</option>
                     </select>
                   </div>
             
@@ -276,7 +282,7 @@
             
                   <div class="formbold-input-radio-wrapper">
                     <label for="ans" class="formbold-form-label">
-                      Would you recomend our site to a friend?
+                      Recomendarias este a site a amigos
                     </label>
             
                     <div class="formbold-radio-flex">
@@ -288,7 +294,7 @@
                             name="ans"
                             id="ans"
                           />
-                          Yes
+                          Sim
                           <span class="formbold-radio-checkmark"></span>
                         </label>
                       </div>
@@ -301,192 +307,64 @@
                             name="ans"
                             id="ans"
                           />
-                          No
+                          Nao
                           <span class="formbold-radio-checkmark"></span>
                         </label>
                       </div>
-            
-                      <div class="formbold-radio-group">
-                        <label class="formbold-radio-label">
-                          <input
-                            class="formbold-input-radio"
-                            type="radio"
-                            name="ans"
-                            id="ans"
-                          />
-                          Maybe
-                          <span class="formbold-radio-checkmark"></span>
-                        </label>
-                      </div>
-                    </div>
-                  </div>
-            
-                  <div class="formbold-input-radio-wrapper">
-                    <label class="formbold-form-label">
-                      Which languages & freameworks you know?
-                    </label>
-            
-                    <div class="formbold-radio-flex">
-                      <div class="formbold-radio-group">
-                        <label class="formbold-radio-label" for="c">
-                          <input
-                            class="formbold-input-radio"
-                            type="radio"
-                            name="c"
-                            id="c"
-                          />
-                          C
-                          <span class="formbold-radio-checkmark"></span>
-                        </label>
-                      </div>
-            
-                      <div class="formbold-radio-group">
-                        <label class="formbold-radio-label" for="c++">
-                          <input
-                            class="formbold-input-radio"
-                            type="radio"
-                            name="c++"
-                            id="c++"
-                          />
-                          c++
-                          <span class="formbold-radio-checkmark"></span>
-                        </label>
-                      </div>
-            
-                      <div class="formbold-radio-group">
-                        <label class="formbold-radio-label" for="java">
-                          <input
-                            class="formbold-input-radio"
-                            type="radio"
-                            name="java"
-                            id="java"
-                          />
-                          Java
-                          <span class="formbold-radio-checkmark"></span>
-                        </label>
-                      </div>
-            
-                      <div class="formbold-radio-group">
-                        <label class="formbold-radio-label" for="python">
-                          <input
-                            class="formbold-input-radio"
-                            type="radio"
-                            name="python"
-                            id="python"
-                          />
-                          Python
-                          <span class="formbold-radio-checkmark"></span>
-                        </label>
-                      </div>
-            
-                      <div class="formbold-radio-group">
-                        <label class="formbold-radio-label" for="javaScript">
-                          <input
-                            class="formbold-input-radio"
-                            type="radio"
-                            name="javaScript"
-                            id="javaScript"
-                          />
-                          JavaScript
-                          <span class="formbold-radio-checkmark"></span>
-                        </label>
-                      </div>
-            
-                      <div class="formbold-radio-group">
-                        <label class="formbold-radio-label" for="react">
-                          <input
-                            class="formbold-input-radio"
-                            type="radio"
-                            name="react"
-                            id="react"
-                          />
-                          React
-                          <span class="formbold-radio-checkmark"></span>
-                        </label>
-                      </div>
-            
-                      <div class="formbold-radio-group">
-                        <label class="formbold-radio-label" for="angular">
-                          <input
-                            class="formbold-input-radio"
-                            type="radio"
-                            name="angular"
-                            id="angular"
-                          />
-                          Angular
-                          <span class="formbold-radio-checkmark"></span>
-                        </label>
-                      </div>
-            
-                      <div class="formbold-radio-group">
-                        <label class="formbold-radio-label" for="django">
-                          <input
-                            class="formbold-input-radio"
-                            type="radio"
-                            name="django"
-                            id="django"
-                          />
-                          Django
-                          <span class="formbold-radio-checkmark"></span>
-                        </label>
-                      </div>
-            
-                      <div class="formbold-radio-group">
-                        <label class="formbold-radio-label" for="tailwind">
-                          <input
-                            class="formbold-input-radio"
-                            type="radio"
-                            name="tailwind"
-                            id="tailwind"
-                          />
-                          Tailwind CSS
-                          <span class="formbold-radio-checkmark"></span>
-                        </label>
-                      </div>
-            
-                      <div class="formbold-radio-group">
-                        <label class="formbold-radio-label" for="bootstrap">
-                          <input
-                            class="formbold-input-radio"
-                            type="radio"
-                            name="bootstrap"
-                            id="bootstrap"
-                          />
-                          Bootstrap
-                          <span class="formbold-radio-checkmark"></span>
-                        </label>
-                      </div>
+          
                     </div>
                   </div>
             
                   <div>
                     <label for="message" class="formbold-form-label">
-                      Any comments or suggestions
+                      Escreva algum comentario ou sugestão.
                     </label>
                     <textarea
                       rows="6"
                       name="message"
                       id="message"
-                      placeholder="Type here..."
+                      placeholder="Escreva aqui..."
                       class="formbold-form-input"
                     ></textarea>
                   </div>
             
-                  <button class="formbold-btn">Submit</button>
+                  <button class="formbold-btn">Enviar</button>
                 </form>
               </div>
             </div>
           </section>
         </div>
+
         <div class="col-lg-6 order-1 order-lg-2 hero-img" data-aos="zoom-out" data-aos-delay="100">
           <section class="team-carousel">
             <div id="carouselExample" class="carousel slide mb-2" data-bs-ride="carousel" data-bs-interval="2500">
-              <div class="carousel-inner">
+              <div class="carousel-inner position-relative ">
                   <div id="team_on_mobile" class="d-none">
                       <img src="assets/img/team/team_mobile.jpg" class="d-block w-100" alt="Imagem 1">
                   </div>
                   <div id="team_on_desktop">
+                    <br><br><br><br><br><br><br>
                     <img src="assets/img/team/team1.jpg" class="d-block w-100" alt="">
+                    <br><br>
+                    <h3>Temporibus et in vero dicta aut eius lider</h3>
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, architecto beatae accusantium, hic cumque omnis qui voluptatum enim eveniet adipisci eaque doloribus commodi illo unde.
+                    </p>
+                    <ul>
+                      <li><i class="bi bi-check-circle"></i> <span>Aut eum totam accusantium voluptatem.</span></li>
+                      <li><i class="bi bi-check-circle"></i> <span>Assumenda et porro nisi nihil nesciunt voluptatibus.</span></li>
+                      <li><i class="bi bi-check-circle"></i> <span>Ullamco laboris nisi ut aliquip ex ea</span></li>
+                    </ul>
+                   <br><br>
+                    <p>
+                      <small>
+                        Sunt rem odit accusantium omnis perspiciatis officia.
+                        Laboriosam aut consequuntur recusandae mollitia doloremque est architecto cupiditate ullam.
+                        Quia est ut occaecati fuga. Distinctio ex repellendus eveniet velit sint quia sapiente cumque.
+                        Et ipsa perferendis ut nihil. Laboriosam vel voluptates tenetur nostrum.
+                      </small>
+                      
+                    </p>
                   </div>
               </div>
           </div>
@@ -508,7 +386,7 @@
         <div class="col footer-about">
           <a href="index.html">
             <div id="desk_footer_logo" class="d-flex align-items-center w-25 justify-content-center opacity-50">
-              <img src="assets/img/luclima/logo.png" alt="" class="img-fluid w-75">
+              <img src="assets/img/luclima/logo.png" alt="" class=" img-fluid w-75">
             </div>
           </a>
         </div>
