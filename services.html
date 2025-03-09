@@ -29,23 +29,74 @@
   <link href="assets/css/main.css" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/carousel.css">
   <style>
-    .carousel-container {
-        max-width: auto;
-        margin: auto;
-    }
+     * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+         .carousel-container {
+            position: relative;
+            width: 90%;
+            max-width: 400px;
+            overflow: hidden;
+            border-radius: 10px;
+            padding: 10px;
+        }
 
-    .carousel-item a {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 60px;
-        background-color: white !important;
-        color: #000 !important;
-        text-decoration: none;
-        font-size: 18px;
-        font-weight: bold;
-        border-radius: 5px;
-    }
+        .carousel {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .carousel a {
+            min-width: 100%;
+            text-align: center;
+            padding: 15px;
+            background-color: transparent;
+            color: #000;
+            text-decoration: none;
+            font-size: 20px;
+            font-weight: bold;
+            border-radius: 5px;
+            margin: 5px;
+            transition: background 0.3s;
+        }
+
+        /* Botões laterais */
+        .btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(0, 0, 0, 0.419);
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            font-size: 20px;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+        }
+
+        .btn-left {
+            left: 10px;
+        }
+
+        .btn-right {
+            right: 10px;
+        }
+
+        /* Responsividade */
+        @media (max-width: 500px) {
+            .carousel a {
+                font-size: 18px;
+                padding: 12px;
+            }
+        }
 </style>
 
   <!-- =======================================================
@@ -66,10 +117,10 @@
 
       <nav id="navmenu" class="navmenu">
         <ul>
-          <li><a href="#hero" class="p-2 ms-3">Início</a></li>
+          <li><a href="index.html#hero" class="p-2 ms-3">Início</a></li>
           <li><a href="about-us.html" class="p-2 ms-3">Sobre nós</a></li>
-          <li><a href="#services" class="p-2 ms-3">Serviços</a></li>
-          <li><a href="#services" class="active p-2 ms-3">Funcionarios ID</a></li>
+          <li><a href="#" class="p-2 ms-3 active">Serviços</a></li>
+          <li><a href="funcionariosid.html" class="p-2 ms-3">Funcionarios ID</a></li>
         </ul>
         <i class="text-white mobile-nav-toggle d-xl-none bi bi-list"></i>
       </nav>
@@ -82,39 +133,15 @@
     </div>
   </header>
 <main>
-    <div id="carouselExample" class="carousel slide carousel-container" data-bs-ride="carousel">
-        <div class="carousel-inner">
-            <div class="carousel-item active">
-                <a href="https://www.google.com" target="_blank">Google</a>
-            </div>
-            <div class="carousel-item">
-                <a href="https://www.youtube.com" target="_blank">YouTube</a>
-            </div>
-            <div class="carousel-item">
-                <a href="https://www.github.com" target="_blank">GitHub</a>
-            </div>
-            <div class="carousel-item">
-                <a href="https://www.openai.com" target="_blank">OpenAI</a>
-            </div>
-            <div class="carousel-item">
-                <a href="https://www.wikipedia.org" target="_blank">Wikipedia</a>
-            </div>
-        </div>
-        <!-- Botões de navegação -->
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        </button>
-    </div>
-    <section>
-      <div class="container">
+  <div class="text-black m-5 d-flex flex-column justify-content-center align-items-center">
+    <h1>Servicos</h1>
+  </div>
 
+<section>
+      <div class="container">
         <div class="row gy-4">
           <div class="col-lg-6 position-relative align-self-start" data-aos="fade-up" data-aos-delay="100">
-            <img src="assets/img/about.png" class="img-fluid" alt="">
-            <a href="https://www.youtube.com/watch?v=Y7f98aduVJ8" class="glightbox pulsating-play-btn"></a>
+            <img src="assets/img/portfolio/black-worker.png" class="img-fluid" alt="">
           </div>
           <div class="col-lg-6 content" data-aos="fade-up" data-aos-delay="200">
             <h3>Voluptatem dignissimos provident quasi corporis voluptates sit assumenda.</h3>
@@ -135,7 +162,36 @@
         </div>
 
       </div>
+      <br><br>
+      <div class="container">
+        <div class="row gy-4">
+          <div class="col-lg-6 position-relative align-self-start" data-aos="fade-up" data-aos-delay="100">
+            <img src="assets/img/portfolio/black-worker.png" class="img-fluid" alt="">
+          </div>
+          <div class="col-lg-6 content" data-aos="fade-up" data-aos-delay="200">
+            <h3>Voluptatem dignissimos provident quasi corporis voluptates sit assumenda.</h3>
+            <p class="fst-italic">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+              magna aliqua.
+            </p>
+            <ul>
+              <li><i class="bi bi-check2-all"></i> <span>Ullamco laboris nisi ut aliquip ex ea commodo consequat.</span></li>
+              <li><i class="bi bi-check2-all"></i> <span>Duis aute irure dolor in reprehenderit in voluptate velit.</span></li>
+              <li><i class="bi bi-check2-all"></i> <span>Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate trideta storacalaperda mastiro dolore eu fugiat nulla pariatur.</span></li>
+            </ul>
+            <p>
+              Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+              velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident
+              Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+              velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident
+              Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+              velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident
+            </p>
+          </div>
+        </div>
 
+      </div>
+      
     </section>
   </main>
 
@@ -208,13 +264,27 @@
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
   <script>
+    let currentIndex = 0;
+    const carousel = document.querySelector('.carousel');
+    const totalSlides = document.querySelectorAll('.carousel a').length;
+    const slideWidth = document.querySelector('.carousel a').offsetWidth;
+
+    function updateCarousel() {
+        carousel.style.transform = `translateX(${-currentIndex * slideWidth}px)`;
+    }
+
+    function nextSlide() {
+        currentIndex = (currentIndex + 1) % totalSlides;
+        updateCarousel();
+    }
+
+    function prevSlide() {
+        currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
+        updateCarousel();
+    }
+
     // Avança automaticamente a cada 1 segundo
-    document.addEventListener("DOMContentLoaded", function () {
-        let carousel = new bootstrap.Carousel(document.querySelector("#carouselExample"), {
-            interval: 1000, // Tempo de troca de slides (1 segundo)
-            ride: "carousel"
-        });
-    });
+    setInterval(nextSlide, 1000);
 </script>
 
 </body>
