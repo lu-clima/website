@@ -28,76 +28,6 @@
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/carousel.css">
-  <style>
-     * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-         .carousel-container {
-            position: relative;
-            width: 90%;
-            max-width: 400px;
-            overflow: hidden;
-            border-radius: 10px;
-            padding: 10px;
-        }
-
-        .carousel {
-            display: flex;
-            transition: transform 0.5s ease-in-out;
-        }
-
-        .carousel a {
-            min-width: 100%;
-            text-align: center;
-            padding: 15px;
-            background-color: transparent;
-            color: #000;
-            text-decoration: none;
-            font-size: 20px;
-            font-weight: bold;
-            border-radius: 5px;
-            margin: 5px;
-            transition: background 0.3s;
-        }
-
-        /* Botões laterais */
-        .btn {
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            background: rgba(0, 0, 0, 0.419);
-            color: white;
-            border: none;
-            padding: 10px;
-            cursor: pointer;
-            font-size: 20px;
-            border-radius: 50%;
-            width: 40px;
-            height: 40px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-
-        }
-
-        .btn-left {
-            left: 10px;
-        }
-
-        .btn-right {
-            right: 10px;
-        }
-
-        /* Responsividade */
-        @media (max-width: 500px) {
-            .carousel a {
-                font-size: 18px;
-                padding: 12px;
-            }
-        }
-</style>
 
   <!-- =======================================================
   * Author: Fernando Julio Vunge
@@ -132,8 +62,9 @@
 
     </div>
   </header>
+  <br><br>
 <main>
-  <div class="text-black m-5 d-flex flex-column justify-content-center align-items-center">
+  <div class="text-black m-2 d-flex flex-column justify-content-center align-items-center">
     <h1>Servicos</h1>
   </div>
 
@@ -144,21 +75,20 @@
             <img src="assets/img/portfolio/black-worker.png" class="img-fluid" alt="">
           </div>
           <div class="col-lg-6 content" data-aos="fade-up" data-aos-delay="200">
-            <h3>Voluptatem dignissimos provident quasi corporis voluptates sit assumenda.</h3>
+            <h3>Serviço de Climatização Profissional da Luclima</h3>
             <p class="fst-italic">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-              magna aliqua.
+                Soluções eficientes para climatização residencial, comercial e industrial, garantindo conforto e qualidade do ar.
             </p>
             <ul>
-              <li><i class="bi bi-check2-all"></i> <span>Ullamco laboris nisi ut aliquip ex ea commodo consequat.</span></li>
-              <li><i class="bi bi-check2-all"></i> <span>Duis aute irure dolor in reprehenderit in voluptate velit.</span></li>
-              <li><i class="bi bi-check2-all"></i> <span>Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate trideta storacalaperda mastiro dolore eu fugiat nulla pariatur.</span></li>
+                <li><i class="bi bi-check2-all"></i> <span>Instalação de ar-condicionado com técnicos qualificados.</span></li>
+                <li><i class="bi bi-check2-all"></i> <span>Manutenção preventiva e corretiva para maior durabilidade dos equipamentos.</span></li>
+                <li><i class="bi bi-check2-all"></i> <span>Higienização completa para garantir um ambiente saudável e livre de impurezas.</span></li>
             </ul>
             <p>
-              Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-              velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident
+                Conte com a Luclima para um ambiente climatizado com eficiência e segurança. Atendimento personalizado e garantia de serviço de qualidade.
             </p>
-          </div>
+        </div>
+        
         </div>
 
       </div>
@@ -263,30 +193,7 @@
 
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
-  <script>
-    let currentIndex = 0;
-    const carousel = document.querySelector('.carousel');
-    const totalSlides = document.querySelectorAll('.carousel a').length;
-    const slideWidth = document.querySelector('.carousel a').offsetWidth;
-
-    function updateCarousel() {
-        carousel.style.transform = `translateX(${-currentIndex * slideWidth}px)`;
-    }
-
-    function nextSlide() {
-        currentIndex = (currentIndex + 1) % totalSlides;
-        updateCarousel();
-    }
-
-    function prevSlide() {
-        currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
-        updateCarousel();
-    }
-
-    // Avança automaticamente a cada 1 segundo
-    setInterval(nextSlide, 1000);
-</script>
-
+  
 </body>
 
 </html>
