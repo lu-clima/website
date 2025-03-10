@@ -238,12 +238,12 @@
                 </div>
                 
                 <br>
-                <form action="https://formbold.com/s/FORM_ID" method="POST">
+                <form id="solicitar-form">
                   <div class="formbold-input-group">
                     <label for="name" class="formbold-form-label"> Nome Completo </label>
                     <input
                       type="text"
-                      name="name"
+                      name="nome"
                       id="name"
                       placeholder="seu nome completo"
                       class="formbold-form-input"
@@ -255,12 +255,12 @@
                       Espesifique o servico que quer solicitar
                     </label>
             
-                    <select class="formbold-form-select" name="occupation" id="occupation">
-                      <option value="Student">Montagem de ar condicionado</option>
-                      <option value="Student">Diagnostico (ar condicionado)</option>
-                      <option value="designer">Manutenção Preventiva (ar condicionado)</option>
-                      <option value="designer">Manutenção Corretiva (ar condicionado)</option>
-                      <option value="frontend">Recarga de gás</option>
+                    <select class="formbold-form-select" name="servico-especifico" id="occupation">
+                      <option value="Montagem de ar condicionado">Montagem de ar condicionado</option>
+                      <option value="Diagnostico (ar condicionado)">Diagnostico (ar condicionado)</option>
+                      <option value="Manutenção Preventiva (ar condicionado)">Manutenção Preventiva (ar condicionado)</option>
+                      <option value="Manutenção Corretiva (ar condicionado)">Manutenção Corretiva (ar condicionado)</option>
+                      <option value="Recarga de gás">Recarga de gás</option>
                     </select>
                   </div>
             
@@ -268,7 +268,7 @@
                     <label for="email" class="formbold-form-label"> Email (Opcional) </label>
                     <input
                       type="email"
-                      name="lastname"
+                      name="email"
                       id="email"
                       placeholder="seu email"
                       class="formbold-form-input"
@@ -276,12 +276,12 @@
                   </div>
             
                   <div class="formbold-input-group">
-                    <label for="phone" class="formbold-form-label"> Contacto Telefonico </label>
+                    <label for="morada" class="formbold-form-label"> Morada </label>
                     <input
-                      type="number"
-                      name="phone"
-                      id="phone"
-                      placeholder="seu contacto telefonico"
+                      type="text"
+                      name="morada"
+                      id="morada"
+                      placeholder="seu endereco, bairro..."
                       class="formbold-form-input"
                     />
                   </div>
@@ -384,9 +384,6 @@
   </main>
 
   <footer id="footer" class="footer">
-
-   
-
     <div class="container footer-top">
       <div class="row gy-4">
         <div class="col footer-about">
@@ -450,8 +447,27 @@
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
   <script>
+    const formulario = document.getElementById('solicitar-form')
+    
+    function redirecionarParaWhatsApp(data) {
+        var numero = "+244972621774"; 
+        var mensagem = `Eu sou ${data.nome}\nOlá, quero fazer um orcamento\n`;
+        var url = "https://wa.me/" + numero.replace(/\D/g, "") + "?text=" + encodeURIComponent(mensagem);
+        
+        window.open(url, "_blank");
+    }
 
+    formulario.onsubmit = function (event) {
+      event.preventDefault()
+      console.log(event);
+      const formData = new FormData(formulario)
+      const dataToSend = {
+        nome: formData.get('nome')
+      }
       
+      redirecionarParaWhatsApp(dataToSend)
+    }
+
   </script>
 </body>
 
