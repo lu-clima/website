@@ -451,7 +451,7 @@
     
     function redirecionarParaWhatsApp(data) {
         var numero = "+244972621774"; 
-        var mensagem = `Eu sou ${data.nome}\nOlá, quero fazer um orcamento\n`;
+        var mensagem = `Eu sou ${data.nome}\nOlá, quero fazer um orcamento para o servico de ${data.servico}, \nminha localizacao: ${data.morada}\n Nota:${data.mensagem}`;
         var url = "https://wa.me/" + numero.replace(/\D/g, "") + "?text=" + encodeURIComponent(mensagem);
         
         window.open(url, "_blank");
@@ -462,7 +462,10 @@
       console.log(event);
       const formData = new FormData(formulario)
       const dataToSend = {
-        nome: formData.get('nome')
+        nome: formData.get('nome'),
+        servico: formData.get('servico-especifico'),
+        morada: formData.get('morada'),
+        mensagem: formData.get('message')
       }
       
       redirecionarParaWhatsApp(dataToSend)
